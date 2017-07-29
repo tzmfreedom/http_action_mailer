@@ -1,0 +1,3 @@
+module HttpMailer
+  # Your code goes here...
+end
