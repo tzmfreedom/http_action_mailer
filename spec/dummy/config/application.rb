@@ -11,7 +11,7 @@ require "action_cable/engine"
 require "sprockets/railtie"
 
 Bundler.require(*Rails.groups)
-require "http_actionmailer"
+require "http_action_mailer"
 
 module Dummy
   class Application < Rails::Application
