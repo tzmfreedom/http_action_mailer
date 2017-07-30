@@ -27,7 +27,15 @@ Rails.application.configure do
   end
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.delivery_method = :http
+  config.action_mailer.http_settings = {
+    url: "#{ENV['HTTP_MAILER_URL']}",
+    path: '/aaa/bbb',
+    headers: {
+      'Runscope-Bucket-Auth' => ENV['RUNSCOPE_AUTH_KEY'],
+    }
+  }
+  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.perform_caching = false
 
