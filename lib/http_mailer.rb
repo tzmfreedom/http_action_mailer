@@ -1,3 +1,1 @@
-module HttpMailer
-  # Your code goes here...
-end
+require 'http_mailer/railtie' if defined?(Rails)
