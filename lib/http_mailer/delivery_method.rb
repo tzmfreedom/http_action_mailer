@@ -17,7 +17,7 @@ module HttpMailer
       conn = Faraday.new(url: @settings[:url])
       conn.post do |r|
         r.path = "#{@settings[:path]}/#{Array(mail.to).first}"
-        r.headers = @settings[:headers] if @settings.include?(:headers)
+        r.headers = @settings[:headers] if @settings[:headers]
         r.body = {
           from: mail.from,
           to: mail.to,

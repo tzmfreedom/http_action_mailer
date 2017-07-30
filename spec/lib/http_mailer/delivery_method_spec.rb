@@ -29,14 +29,16 @@ describe ::HttpMailer::DeliveryMethod do
     {
       url: url,
       path: path,
+      headers: headers,
     }
   }
 
   subject { ::HttpMailer::DeliveryMethod.new(settings) }
 
-  context 'when only url specified' do
+  context 'url only specified' do
     let(:url) { 'https://www.example.com' }
     let(:path) { nil }
+    let(:headers) { nil }
     it do
       stub = stub_request(:post, "#{url}/#{to}")
       subject.deliver!(mail)
@@ -44,11 +46,16 @@ describe ::HttpMailer::DeliveryMethod do
     end
   end
 
-  context 'when path specified' do
+  context 'path specified' do
     let(:url) { 'https://www.example.com' }
     let(:path) { '/path/to' }
+    let(:headers) {
+      {
+        'Content-Type' => 'application/json',
+      }
+    }
     it do
-      stub = stub_request(:post, "#{url}#{path}/#{to}")
+      stub = stub_request(:post, "#{url}#{path}/#{to}").with(headers: headers)
       subject.deliver!(mail)
       expect(stub).to have_been_requested
     end
