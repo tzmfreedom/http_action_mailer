@@ -1,4 +1,4 @@
 # desc "Explaining what the task does"
-# task :http_mailer do
+# task :http_action_mailer do
 #   # Task goes here
 # end

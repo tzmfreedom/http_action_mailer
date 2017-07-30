@@ -8,7 +8,7 @@ How to use my plugin.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'http_mailer'
+gem 'http_action_mailer'
 ```
 
 And then execute:
@@ -18,7 +18,7 @@ $ bundle
 
 Or install it yourself as:
 ```bash
-$ gem install http_mailer
+$ gem install http_action_mailer
 ```
 
 ## Contributing

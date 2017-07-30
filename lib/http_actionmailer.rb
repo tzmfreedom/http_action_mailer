@@ -1,0 +1,1 @@
+require 'http_action_mailer/railtie' if defined?(Rails)

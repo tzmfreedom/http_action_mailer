@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe ::HttpMailer::DeliveryMethod do
+describe ::HttpActionMailer::DeliveryMethod do
   let(:to) { 'to@fuga.com' }
   let(:cc) { 'cc@fuga.com' }
   let(:from) { 'from@fuga.com' }
@@ -33,7 +33,7 @@ describe ::HttpMailer::DeliveryMethod do
     }
   }
 
-  subject { ::HttpMailer::DeliveryMethod.new(settings) }
+  subject { ::HttpActionMailer::DeliveryMethod.new(settings) }
 
   context 'url only specified' do
     let(:url) { 'https://www.example.com' }

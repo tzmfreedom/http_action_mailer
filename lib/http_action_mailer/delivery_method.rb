@@ -1,7 +1,7 @@
 require 'faraday'
 require 'json'
 
-module HttpMailer
+module HttpActionMailer
   class DeliveryMethod
     def initialize(settings)
       @settings = settings

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    http_mailer (0.0.1)
+    http_action_mailer (0.0.1)
       faraday
       rails (~> 5.1.2)
 
@@ -144,7 +144,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  http_mailer!
+  http_action_mailer!
   rspec-rails
   sqlite3
   webmock
