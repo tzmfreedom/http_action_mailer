@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/tzmfreedom/http_action_mailer.svg?branch=master)](https://travis-ci.org/tzmfreedom/http_action_mailer)
+
 # HttpMailer
 Short description and motivation.
 
