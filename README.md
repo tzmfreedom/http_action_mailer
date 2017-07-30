@@ -4,6 +4,18 @@ Short description and motivation.
 ## Usage
 How to use my plugin.
 
+```ruby
+# config/environments/development.rb
+config.action_mailer.http_settings = {
+  url: 'https://example.com',
+  path: '/foo/bar',
+  headers: {
+    'Content-Type' => 'application/json',
+    'X-HOGEHOGE-HEader' => 'XXXX',
+  },
+}
+```
+
 ## Installation
 Add this line to your application's Gemfile:
 
