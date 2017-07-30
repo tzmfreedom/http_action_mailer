@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = HttpMailer::VERSION
   s.authors     = ["tzmfreedom"]
   s.email       = ["makoto_tajitsu@hotmail.co.jp"]
-  s.homepage    = ""
-  s.summary     = ""
-  s.description = ""
+  s.homepage    = "https://github.com/tzmfreedom/http_mailer"
+  s.summary     = "HTTP delivery method for ActionMailer"
+  s.description = "HTTP delivery method for ActionMailer"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
