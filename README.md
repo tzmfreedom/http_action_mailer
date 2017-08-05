@@ -1,19 +1,19 @@
 [![Build Status](https://travis-ci.org/tzmfreedom/http_action_mailer.svg?branch=master)](https://travis-ci.org/tzmfreedom/http_action_mailer)
 
-# HttpMailer
-Short description and motivation.
+# HttpActionMailer
+
+AcitonMailer plugin to send HTTP request for debugging mail contents.
 
 ## Usage
-How to use my plugin.
 
 ```ruby
 # config/environments/development.rb
+config.action_mailer.delivery_method = :http
 config.action_mailer.http_settings = {
   url: 'https://example.com',
   path: '/foo/bar',
   headers: {
-    'Content-Type' => 'application/json',
-    'X-HOGEHOGE-HEader' => 'XXXX',
+    'X-HOGEHOGE-Header' => 'XXXX',
   },
 }
 ```
