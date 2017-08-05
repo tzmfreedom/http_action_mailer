@@ -18,6 +18,8 @@ module HttpActionMailer
       conn.post do |r|
         r.path = "#{@settings[:path]}/#{Array(mail.to).first}"
         r.headers = @settings[:headers] if @settings[:headers]
+        r.headers['Content-Type'] = 'application/json'
+        r.headers['User-Agent'] = 'Ruby: http_action_mailer'
         r.body = {
           from: mail.from,
           to: mail.to,
