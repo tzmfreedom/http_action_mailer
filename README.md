@@ -18,6 +18,23 @@ config.action_mailer.http_settings = {
 }
 ```
 
+Example for POST payload
+
+```json
+{
+    "from": [
+        "from@example.com"
+    ],
+    "to": [
+        "to@example.org"
+    ],
+    "cc": null,
+    "subject": "Hello",
+    "text": "User#hello\n\nHi, find me in app/views/user_mailer/hello.text.erb\n\n",
+    "html": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n    <style>\n      /* Email styles need to be inline */\n    </style>\n  </head>\n\n  <body>\n    <h1>User#hello</h1>\n\n<p>\n  Hi, find me in app/views/user_mailer/hello.html.erb\n</p>\n\n  </body>\n</html>\n"
+}
+```
+
 ## Installation
 Add this line to your application's Gemfile:
 
